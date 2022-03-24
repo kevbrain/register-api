@@ -1,0 +1,9 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: EventListener
+metadata:
+  name: register-api-dev-eventlistener
+  namespace: register-api-dev
+spec:
+  serviceAccountName: pipeline
+  triggers:
+    - triggerRef: register-api-dev-trigger

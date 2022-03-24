@@ -1,0 +1,11 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: Trigger
+metadata:
+  name: register-api-dev-trigger
+  namespace: register-api-dev
+spec:
+  serviceAccountName: pipeline
+  bindings:
+    - ref: register-api-dev-triggerbinding
+  template:
+    ref: register-api-dev-triggertemplate

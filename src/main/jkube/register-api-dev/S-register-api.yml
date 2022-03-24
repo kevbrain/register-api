@@ -1,0 +1,12 @@
+kind: Secret
+apiVersion: v1
+metadata:
+  namespace: {{ocp-namespace}}
+  name: register-api-secret-0
+  labels:
+    app: register-api    
+stringData:  
+  actuator.password: {{actuator.password}}
+type: Opaque
+---
+ 
